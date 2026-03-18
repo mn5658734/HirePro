@@ -14,6 +14,7 @@ import Step8Video from './pages/Step8Video'
 import Step9Practical from './pages/Step9Practical'
 import Step10References from './pages/Step10References'
 import Complete from './pages/Complete'
+import Dashboard from './pages/Dashboard'
 
 export default function App() {
   return (
