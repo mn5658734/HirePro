@@ -24,7 +24,6 @@ export default function Layout() {
                 {l.toUpperCase()}
               </button>
             ))}
-            </div>
           </div>
         </div>
         {isStepPage && <ProgressBar />}
