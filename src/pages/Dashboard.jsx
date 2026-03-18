@@ -1,24 +1,40 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import { useProfile } from '../context/ProfileContext'
 import { getRoleById } from '../data/jobCategories'
+import { MOCK_JOBS } from '../data/mockJobs'
+import { getProfileCompletion } from '../utils/profileCompletion'
+import DashboardHome from './DashboardHome'
+import DashboardProfile from './DashboardProfile'
+import DashboardJobs from './DashboardJobs'
 import './Dashboard.css'
 
 export default function Dashboard() {
   const { t } = useLanguage()
-  const { profile } = useProfile()
+  const { profile, resetProfile } = useProfile()
+  const navigate = useNavigate()
+  const [activeTab, setActiveTab] = useState('home')
 
-  const roleIds = profile.selectedRoles || profile.skills || []
-  const rolesWithIndustry = roleIds
-    .map((id) => getRoleById(id))
-    .filter(Boolean)
+  const handleLogout = () => {
+    resetProfile()
+    navigate('/')
+  }
 
-  const byIndustry = rolesWithIndustry.reduce((acc, r) => {
-    const key = r.industryLabel
-    if (!acc[key]) acc[key] = []
-    acc[key].push(r.label)
-    return acc
-  }, {})
+  const tabs = [
+    { id: 'home', label: 'Home', icon: '🏠' },
+    { id: 'profile', label: 'Profile', icon: '👤' },
+    { id: 'jobs', label: 'Jobs', icon: '💼' },
+    { id: 'logout', label: 'Logout', icon: '🚪' },
+  ]
+
+  const handleTabClick = (id) => {
+    if (id === 'logout') {
+      handleLogout()
+    } else {
+      setActiveTab(id)
+    }
+  }
 
   return (
     <div className="dashboard">
@@ -29,43 +45,39 @@ export default function Dashboard() {
         </p>
       </div>
 
-      <div className="dashboard-card profile-summary">
-        <h2>Profile Summary</h2>
-        <ul>
-          {profile.contact && <li>Contact: {profile.contact}</li>}
-          {profile.days?.length > 0 && <li>Available: {profile.days.join(', ')}</li>}
-          {profile.shift && <li>Shift: {profile.shift}</li>}
-          {profile.location && <li>Location: Captured</li>}
-          {profile.references?.length > 0 && <li>References: {profile.references.length}</li>}
-        </ul>
-        {Object.keys(byIndustry).length > 0 && (
-          <div className="dashboard-roles">
-            <h3>Your roles</h3>
-            {Object.entries(byIndustry).map(([industry, roles]) => (
-              <div key={industry} className="dashboard-industry">
-                <strong>{industry}</strong>
-                <ul>
-                  {roles.map((r) => (
-                    <li key={r}>{r}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+      <nav className="dashboard-nav" role="tablist" aria-label="Dashboard sections">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
+            aria-controls={`panel-${tab.id}`}
+            id={`tab-${tab.id}`}
+            onClick={() => handleTabClick(tab.id)}
+            className={`dashboard-nav-btn ${activeTab === tab.id ? 'active' : ''} ${tab.id === 'logout' ? 'logout' : ''}`}
+          >
+            <span className="nav-icon">{tab.icon}</span>
+            <span className="nav-label">{tab.label}</span>
+          </button>
+        ))}
+      </nav>
+
+      <div className="dashboard-content">
+        {activeTab === 'home' && (
+          <div id="panel-home" role="tabpanel" aria-labelledby="tab-home">
+            <DashboardHome onNavigate={(tab) => setActiveTab(tab)} />
           </div>
         )}
-      </div>
-
-      <div className="dashboard-card">
-        <h2>Matched Jobs</h2>
-        <p className="dashboard-empty">No new matches yet. Complete your profile to get matched with employers.</p>
-        <Link to="/step/2" className="btn btn-outline">
-          Edit Profile
-        </Link>
-      </div>
-
-      <div className="dashboard-card">
-        <h2>Applications</h2>
-        <p className="dashboard-empty">You haven't applied to any jobs yet.</p>
+        {activeTab === 'profile' && (
+          <div id="panel-profile" role="tabpanel" aria-labelledby="tab-profile">
+            <DashboardProfile />
+          </div>
+        )}
+        {activeTab === 'jobs' && (
+          <div id="panel-jobs" role="tabpanel" aria-labelledby="tab-jobs">
+            <DashboardJobs />
+          </div>
+        )}
       </div>
     </div>
   )

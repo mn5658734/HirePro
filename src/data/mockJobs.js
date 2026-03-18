@@ -1,0 +1,66 @@
+/**
+ * Mock job postings for demo
+ */
+
+export const MOCK_JOBS = [
+  {
+    id: 'j1',
+    title: 'Customer Support Executive',
+    company: 'TechServe Solutions',
+    location: 'Mumbai',
+    salary: '₹18,000 - ₹25,000/mo',
+    type: 'Full-time',
+    posted: '2 days ago',
+    roleId: 'customer_support',
+  },
+  {
+    id: 'j2',
+    title: 'Office Assistant',
+    company: 'Global Logistics Pvt Ltd',
+    location: 'Delhi',
+    salary: '₹15,000 - ₹20,000/mo',
+    type: 'Full-time',
+    posted: '1 day ago',
+    roleId: 'office_assistant',
+  },
+  {
+    id: 'j3',
+    title: 'HR Coordinator',
+    company: 'Retail Corp India',
+    location: 'Bangalore',
+    salary: '₹22,000 - ₹30,000/mo',
+    type: 'Full-time',
+    posted: '3 days ago',
+    roleId: 'hr_coordinator',
+  },
+  {
+    id: 'j4',
+    title: 'Forklift Operator',
+    company: 'Warehouse Solutions',
+    location: 'Pune',
+    salary: '₹16,000 - ₹22,000/mo',
+    type: 'Shift-based',
+    posted: '5 hours ago',
+    roleId: 'forklift',
+  },
+  {
+    id: 'j5',
+    title: 'Welder',
+    company: 'MetalWorks Industries',
+    location: 'Chennai',
+    salary: '₹20,000 - ₹28,000/mo',
+    type: 'Full-time',
+    posted: '1 week ago',
+    roleId: 'welder',
+  },
+  {
+    id: 'j6',
+    title: 'Receptionist',
+    company: 'Grand Hotel',
+    location: 'Goa',
+    salary: '₹14,000 - ₹19,000/mo',
+    type: 'Full-time',
+    posted: '4 days ago',
+    roleId: 'receptionist',
+  },
+]

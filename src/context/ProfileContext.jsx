@@ -17,6 +17,7 @@ export function ProfileProvider({ children }) {
     videoUrl: null,
     practicalScores: [],
     references: [],
+    appliedJobs: [],
   })
 
   const updateProfile = (updates) => {
@@ -24,7 +25,7 @@ export function ProfileProvider({ children }) {
   }
 
   return (
-    <ProfileContext.Provider value={{ profile, updateProfile }}>
+    <ProfileContext.Provider value={{ profile, updateProfile, resetProfile }}>
       {children}
     </ProfileContext.Provider>
   )

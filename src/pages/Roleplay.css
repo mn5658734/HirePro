@@ -46,3 +46,15 @@
 .roleplay-input .input {
   flex: 1;
 }
+
+.roleplay-progress {
+  font-size: 0.85rem;
+  color: var(--hirepro-muted);
+  margin-bottom: 12px;
+}
+
+.roleplay-hint {
+  font-size: 0.8rem;
+  color: var(--hirepro-muted);
+  margin: 12px 0 0;
+}
