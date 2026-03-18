@@ -10,7 +10,7 @@ export default function Layout() {
   const { profile } = useProfile()
   const isStepPage = pathname.match(/\/step\/\d+/)
   const isDashboard = pathname === '/dashboard'
-  const hasProfile = profile.contact
+  const hasProfile = profile?.contact
 
   return (
     <div className="layout">

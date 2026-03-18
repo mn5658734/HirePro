@@ -24,6 +24,25 @@ export function ProfileProvider({ children }) {
     setProfile((p) => ({ ...p, ...updates }))
   }
 
+  const resetProfile = () => {
+    setProfile({
+      contact: '',
+      phoneVerified: false,
+      skills: [],
+      selectedRoles: [],
+      days: [],
+      shift: 'flexible',
+      credentials: [],
+      location: null,
+      roleplayResponses: [],
+      situationAnswers: [],
+      videoUrl: null,
+      practicalScores: [],
+      references: [],
+      appliedJobs: [],
+    })
+  }
+
   return (
     <ProfileContext.Provider value={{ profile, updateProfile, resetProfile }}>
       {children}

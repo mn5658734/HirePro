@@ -2,9 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 import { useProfile } from '../context/ProfileContext'
-import { getRoleById } from '../data/jobCategories'
-import { MOCK_JOBS } from '../data/mockJobs'
-import { getProfileCompletion } from '../utils/profileCompletion'
 import DashboardHome from './DashboardHome'
 import DashboardProfile from './DashboardProfile'
 import DashboardJobs from './DashboardJobs'
@@ -17,7 +14,7 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('home')
 
   const handleLogout = () => {
-    resetProfile()
+    resetProfile?.()
     navigate('/')
   }
 
@@ -41,7 +38,7 @@ export default function Dashboard() {
       <div className="dashboard-header">
         <h1 className="dashboard-title">My Dashboard</h1>
         <p className="dashboard-welcome">
-          Welcome back{profile.contact ? `, ${profile.contact}` : ''}
+          Welcome back{profile?.contact ? `, ${profile.contact}` : ''}
         </p>
       </div>
 

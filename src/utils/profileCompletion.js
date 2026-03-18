@@ -3,6 +3,7 @@
  */
 
 export function getProfileCompletion(profile) {
+  if (!profile) return 0
   const checks = [
     !!profile.contact,
     (profile.selectedRoles?.length || profile.skills?.length) > 0,
