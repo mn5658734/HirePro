@@ -1,0 +1,58 @@
+:root {
+  --hirepro-green: #0f4c3a;
+  --hirepro-green-light: #1a6b4f;
+  --hirepro-gold: #d4a853;
+  --hirepro-cream: #f5f0e8;
+  --hirepro-dark: #1a1a1a;
+  --hirepro-text: #2d2d2d;
+  --hirepro-muted: #6b6b6b;
+  --hirepro-white: #ffffff;
+  --hirepro-shadow: 0 4px 20px rgba(15, 76, 58, 0.12);
+  --hirepro-radius: 12px;
+  --hirepro-radius-lg: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--hirepro-cream);
+  color: var(--hirepro-text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Accessibility: Focus visible */
+:focus-visible {
+  outline: 3px solid var(--hirepro-gold);
+  outline-offset: 2px;
+}
+
+/* Large touch targets for mobile */
+button, a, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--hirepro-green);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}

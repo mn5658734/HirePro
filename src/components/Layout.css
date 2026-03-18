@@ -1,0 +1,91 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--hirepro-green);
+  color: white;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--hirepro-shadow);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: white;
+  text-decoration: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-dashboard {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+}
+
+.header-dashboard:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+}
+
+.lang-switcher button {
+  padding: 6px 12px;
+  border: 2px solid rgba(255,255,255,0.4);
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-switcher button:hover,
+.lang-switcher button.active {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+}
+
+.main {
+  flex: 1;
+  padding: 24px 20px 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer {
+  background: var(--hirepro-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,35 @@
+import { createContext, useContext, useState } from 'react'
+
+const ProfileContext = createContext()
+
+export function ProfileProvider({ children }) {
+  const [profile, setProfile] = useState({
+    contact: '',
+    phoneVerified: false,
+    skills: [],
+    selectedRoles: [], // role IDs from jobCategories (Industry > Skill Type > Role)
+    days: [],
+    shift: 'flexible',
+    credentials: [],
+    location: null,
+    roleplayResponses: [],
+    situationAnswers: [],
+    videoUrl: null,
+    practicalScores: [],
+    references: [],
+  })
+
+  const updateProfile = (updates) => {
+    setProfile((p) => ({ ...p, ...updates }))
+  }
+
+  return (
+    <ProfileContext.Provider value={{ profile, updateProfile }}>
+      {children}
+    </ProfileContext.Provider>
+  )
+}
+
+export function useProfile() {
+  return useContext(ProfileContext)
+}

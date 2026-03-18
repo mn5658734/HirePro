@@ -1,0 +1,82 @@
+.complete {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.complete-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: var(--hirepro-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.complete-title {
+  font-size: 1.5rem;
+  color: var(--hirepro-dark);
+  margin: 0 0 12px;
+}
+
+.complete-desc {
+  color: var(--hirepro-muted);
+  margin: 0 0 32px;
+}
+
+.complete-summary {
+  background: white;
+  border-radius: var(--hirepro-radius);
+  padding: 20px;
+  text-align: left;
+  margin-bottom: 32px;
+  box-shadow: var(--hirepro-shadow);
+}
+
+.complete-summary h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+
+.complete-summary ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.complete-summary li {
+  margin-bottom: 6px;
+}
+
+.complete-roles {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.complete-roles h4 {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+}
+
+.complete-industry {
+  margin-bottom: 12px;
+}
+
+.complete-industry strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--hirepro-green);
+}
+
+.complete-industry ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.complete-industry li {
+  margin-bottom: 4px;
+}

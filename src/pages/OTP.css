@@ -1,0 +1,35 @@
+.otp-input {
+  font-size: 1.25rem;
+  letter-spacing: 0.5em;
+  text-align: center;
+}
+
+.otp-change-number {
+  background: none;
+  border: none;
+  color: var(--hirepro-green);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0 0 16px;
+  text-decoration: underline;
+}
+
+.otp-error {
+  color: #c92a2a;
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+.otp-demo-hint {
+  font-size: 0.8rem;
+  color: var(--hirepro-muted);
+  margin: -8px 0 16px;
+}
+
+.step-nav-single {
+  margin-top: 24px;
+}
+
+.step-nav-single .btn {
+  width: 100%;
+}

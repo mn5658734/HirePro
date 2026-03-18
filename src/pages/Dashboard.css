@@ -1,0 +1,70 @@
+.dashboard {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--hirepro-dark);
+  margin: 0 0 4px;
+}
+
+.dashboard-welcome {
+  color: var(--hirepro-muted);
+  margin: 0;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: var(--hirepro-radius);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: var(--hirepro-shadow);
+}
+
+.dashboard-card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 16px;
+  color: var(--hirepro-dark);
+}
+
+.dashboard-card h3 {
+  font-size: 0.95rem;
+  margin: 16px 0 8px;
+  color: var(--hirepro-green);
+}
+
+.dashboard-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.dashboard-card li {
+  margin-bottom: 6px;
+}
+
+.dashboard-roles {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.dashboard-industry {
+  margin-bottom: 12px;
+}
+
+.dashboard-industry strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.dashboard-empty {
+  color: var(--hirepro-muted);
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+}

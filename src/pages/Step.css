@@ -1,0 +1,284 @@
+.step {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--hirepro-dark);
+  margin: 0 0 8px;
+}
+
+.step-desc {
+  color: var(--hirepro-muted);
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+}
+
+.step-form {
+  margin-bottom: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--hirepro-radius);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input:focus {
+  border-color: var(--hirepro-green);
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Skill grid */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--hirepro-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.skill-card:hover,
+.skill-card.selected {
+  border-color: var(--hirepro-green);
+  background: rgba(15, 76, 58, 0.05);
+}
+
+.skill-icon {
+  font-size: 1.75rem;
+}
+
+.skill-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Day grid */
+.day-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.day-btn {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.day-btn.selected {
+  border-color: var(--hirepro-green);
+  background: var(--hirepro-green);
+  color: white;
+}
+
+.shift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.shift-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: var(--hirepro-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.shift-btn.selected {
+  border-color: var(--hirepro-green);
+  background: rgba(15, 76, 58, 0.08);
+}
+
+.shift-icon {
+  font-size: 1.5rem;
+}
+
+/* Credentials */
+.cred-upload {
+  margin-bottom: 16px;
+}
+
+.cred-upload-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  border: 2px dashed #ccc;
+  border-radius: var(--hirepro-radius);
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cred-upload-btn:hover {
+  border-color: var(--hirepro-green);
+  background: rgba(15, 76, 58, 0.03);
+}
+
+.cred-icon {
+  font-size: 1.5rem;
+}
+
+.cred-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.cred-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: var(--hirepro-shadow);
+}
+
+.cred-item button {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--hirepro-muted);
+}
+
+/* Geo */
+.geo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  border: 2px solid var(--hirepro-green);
+  border-radius: var(--hirepro-radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--hirepro-green);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.geo-btn:hover:not(:disabled) {
+  background: var(--hirepro-green);
+  color: white;
+}
+
+.geo-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.geo-icon {
+  font-size: 1.5rem;
+}
+
+.geo-success {
+  color: var(--hirepro-green);
+  margin: 16px 0;
+}
+
+.geo-error {
+  color: #c92a2a;
+  margin: 16px 0;
+}
+
+/* Situation test */
+.situation-card {
+  background: white;
+  border-radius: var(--hirepro-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--hirepro-shadow);
+}
+
+.situation-scenario {
+  font-weight: 500;
+  margin: 0 0 16px;
+}
+
+.situation-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.situation-opt {
+  padding: 14px 16px;
+  text-align: left;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.situation-opt:hover,
+.situation-opt.selected {
+  border-color: var(--hirepro-green);
+  background: rgba(15, 76, 58, 0.05);
+}
+
+.step-progress {
+  font-size: 0.85rem;
+  color: var(--hirepro-muted);
+  margin: 0 0 16px;
+}
+
+/* References */
+.ref-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.ref-note {
+  font-size: 0.9rem;
+  color: var(--hirepro-muted);
+  margin: 0 0 24px;
+}

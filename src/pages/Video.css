@@ -1,0 +1,43 @@
+.video-container {
+  background: var(--hirepro-dark);
+  border-radius: var(--hirepro-radius-lg);
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.video-placeholder {
+  aspect-ratio: 9/16;
+  max-height: 320px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.video-countdown {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.video-recording {
+  color: #ff6b6b;
+}
+
+.video-done {
+  color: #51cf66;
+}
+
+.video-record-btn {
+  margin-top: 16px;
+  padding: 14px 28px;
+  background: var(--hirepro-gold);
+  color: var(--hirepro-dark);
+  border: none;
+  border-radius: var(--hirepro-radius);
+  font-weight: 600;
+  cursor: pointer;
+}

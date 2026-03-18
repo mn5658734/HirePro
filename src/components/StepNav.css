@@ -1,0 +1,29 @@
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.step-nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--hirepro-green);
+  border: 2px solid var(--hirepro-green);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--hirepro-muted);
+}
+
+.btn-ghost:hover {
+  color: var(--hirepro-text);
+}
