@@ -7,10 +7,15 @@
 .otp-change-number {
   background: none;
   border: none;
-  color: var(--hirepro-green);
+  color: var(--beable-accent);
   font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
   padding: 0 0 16px;
+  text-decoration: none;
+}
+
+.otp-change-number:hover {
   text-decoration: underline;
 }
 
@@ -22,7 +27,7 @@
 
 .otp-demo-hint {
   font-size: 0.8rem;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   margin: -8px 0 16px;
 }
 

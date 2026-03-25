@@ -1,0 +1,168 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--beable-bg);
+}
+
+.app-shell-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--beable-surface);
+  border-right: 1px solid var(--beable-border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.app-shell-brand {
+  padding: 24px 20px 20px;
+}
+
+.app-shell-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--beable-text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.app-shell-logo-dot {
+  color: var(--beable-accent);
+}
+
+.app-shell-nav {
+  flex: 1;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+.app-shell-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--beable-radius-sm);
+  color: var(--beable-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.app-shell-link:hover {
+  background: var(--beable-bg);
+  color: var(--beable-text);
+}
+
+.app-shell-link.active {
+  background: #f3f4f6;
+  color: var(--beable-text);
+  font-weight: 600;
+}
+
+.app-shell-link-icon {
+  display: flex;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.app-shell-footer {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--beable-border);
+}
+
+.app-shell-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.app-shell-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: var(--beable-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.app-shell-user-meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-shell-user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--beable-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-shell-user-role {
+  font-size: 0.75rem;
+  color: var(--beable-muted);
+}
+
+.app-shell-signout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  border-radius: var(--beable-radius-sm);
+  color: var(--beable-muted);
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.app-shell-signout:hover {
+  background: var(--beable-bg);
+  color: var(--beable-text);
+}
+
+.app-shell-main {
+  flex: 1;
+  min-width: 0;
+  padding: 32px 40px 48px;
+  max-width: 1200px;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .app-shell-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--beable-border);
+  }
+
+  .app-shell-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+  }
+
+  .app-shell-main {
+    padding: 20px 16px;
+  }
+}

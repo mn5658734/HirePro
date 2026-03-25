@@ -1,17 +1,6 @@
-:root {
-  --hirepro-green: #0f4c3a;
-  --hirepro-green-light: #1a6b4f;
-  --hirepro-gold: #d4a853;
-  --hirepro-cream: #f5f0e8;
-  --hirepro-dark: #1a1a1a;
-  --hirepro-text: #2d2d2d;
-  --hirepro-muted: #6b6b6b;
-  --hirepro-white: #ffffff;
-  --hirepro-shadow: 0 4px 20px rgba(15, 76, 58, 0.12);
-  --hirepro-radius: 12px;
-  --hirepro-radius-lg: 20px;
-}
-
+/**
+ * Global base styles — tokens from theme.css (BeAble / dashboard)
+ */
 * {
   box-sizing: border-box;
 }
@@ -23,36 +12,99 @@ html {
 
 body {
   margin: 0;
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--hirepro-cream);
-  color: var(--hirepro-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--beable-bg);
+  color: var(--beable-text);
   line-height: 1.5;
   min-height: 100vh;
 }
 
-/* Accessibility: Focus visible */
+/* Focus */
 :focus-visible {
-  outline: 3px solid var(--hirepro-gold);
+  outline: 3px solid var(--beable-accent);
   outline-offset: 2px;
 }
 
-/* Large touch targets for mobile */
-button, a, [role="button"] {
+/* Touch targets */
+button,
+a,
+[role='button'] {
   min-height: 44px;
   min-width: 44px;
 }
 
-/* Skip link for screen readers */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--hirepro-green);
+  background: var(--beable-navy);
   color: white;
   padding: 8px 16px;
   z-index: 100;
   transition: top 0.2s;
 }
+
 .skip-link:focus {
   top: 0;
+}
+
+/* Shared buttons (onboarding + landing) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: var(--beable-radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, box-shadow 0.15s;
+  line-height: 1.25;
+}
+
+.btn.btn-primary {
+  background: var(--beable-accent);
+  color: white;
+}
+
+.btn.btn-primary:hover:not(:disabled) {
+  background: var(--beable-accent-hover);
+}
+
+.btn.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: var(--beable-surface);
+  color: var(--beable-text);
+  border: 1px solid var(--beable-border);
+}
+
+.btn-outline:hover {
+  background: var(--beable-bg);
+  border-color: var(--beable-muted);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--beable-muted);
+  border: none;
+  min-width: auto;
+}
+
+.btn-ghost:hover {
+  color: var(--beable-text);
+  background: var(--beable-bg);
+}
+
+.btn-lg {
+  min-height: 48px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: var(--beable-radius-sm);
 }

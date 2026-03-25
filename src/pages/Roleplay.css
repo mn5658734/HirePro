@@ -1,11 +1,11 @@
 .roleplay-chat {
-  background: white;
-  border-radius: var(--hirepro-radius);
+  background: var(--beable-bg);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
   padding: 16px;
   max-height: 280px;
   overflow-y: auto;
   margin-bottom: 16px;
-  box-shadow: var(--hirepro-shadow);
 }
 
 .roleplay-msg {
@@ -18,22 +18,22 @@
 
 .roleplay-msg.ai {
   padding: 12px;
-  background: var(--hirepro-cream);
-  border-radius: 8px;
-  border-left: 4px solid var(--hirepro-green);
+  background: var(--beable-surface);
+  border-radius: var(--beable-radius-sm);
+  border-left: 3px solid var(--beable-accent);
 }
 
 .roleplay-msg.user {
   padding: 12px;
-  background: rgba(15, 76, 58, 0.08);
-  border-radius: 8px;
+  background: var(--beable-accent-soft);
+  border-radius: var(--beable-radius-sm);
   margin-left: 24px;
 }
 
 .roleplay-role {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   display: block;
   margin-bottom: 4px;
 }
@@ -49,12 +49,23 @@
 
 .roleplay-progress {
   font-size: 0.85rem;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   margin-bottom: 12px;
+  font-weight: 500;
 }
 
 .roleplay-hint {
   font-size: 0.8rem;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   margin: 12px 0 0;
+}
+
+.step-embed .step-title {
+  font-size: 1.25rem;
+}
+
+.practice-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--beable-border);
 }

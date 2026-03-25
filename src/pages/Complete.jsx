@@ -56,7 +56,7 @@ export default function Complete() {
           </div>
         )}
       </div>
-      <Link to="/dashboard" className="btn btn-primary btn-lg">
+      <Link to="/app" className="btn btn-primary btn-lg">
         {t('goToDashboard')}
       </Link>
     </div>

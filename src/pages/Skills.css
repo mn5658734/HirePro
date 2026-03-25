@@ -1,6 +1,6 @@
 .skills-hint {
   font-size: 0.9rem;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   margin: -8px 0 20px;
 }
 
@@ -12,10 +12,11 @@
 }
 
 .industry-block {
-  background: white;
-  border-radius: var(--hirepro-radius);
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
   overflow: hidden;
-  box-shadow: var(--hirepro-shadow);
+  box-shadow: var(--beable-shadow);
 }
 
 .industry-header {
@@ -25,21 +26,22 @@
   gap: 12px;
   padding: 16px;
   border: none;
-  background: white;
+  background: var(--beable-surface);
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--hirepro-dark);
+  color: var(--beable-text);
   text-align: left;
-  transition: background 0.2s;
+  transition: background 0.15s;
+  font-family: inherit;
 }
 
 .industry-header:hover {
-  background: var(--hirepro-cream);
+  background: var(--beable-bg);
 }
 
 .industry-header.expanded {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--beable-border);
 }
 
 .industry-icon {
@@ -52,7 +54,7 @@
 
 .industry-arrow {
   font-size: 0.7rem;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
 }
 
 .industry-roles {
@@ -75,23 +77,24 @@
   align-items: flex-start;
   gap: 4px;
   padding: 12px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  background: white;
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius-sm);
+  background: var(--beable-bg);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.15s, background 0.15s;
   text-align: left;
   font-family: inherit;
 }
 
 .role-chip:hover {
-  border-color: var(--hirepro-green);
-  background: rgba(15, 76, 58, 0.03);
+  border-color: var(--beable-accent);
+  background: var(--beable-accent-soft);
 }
 
 .role-chip.selected {
-  border-color: var(--hirepro-green);
-  background: rgba(15, 76, 58, 0.08);
+  border-color: var(--beable-accent);
+  background: var(--beable-accent-soft);
+  box-shadow: 0 0 0 1px var(--beable-accent);
 }
 
 .role-label {
@@ -103,7 +106,7 @@
 .role-skill-badge {
   font-size: 0.65rem;
   font-weight: 600;
-  color: var(--badge-color, var(--hirepro-muted));
+  color: var(--badge-color, var(--beable-muted));
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -111,6 +114,6 @@
 .skills-count {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--hirepro-green);
+  color: var(--beable-accent);
   margin: 0 0 16px;
 }

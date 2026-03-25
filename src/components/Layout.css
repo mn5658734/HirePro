@@ -5,7 +5,7 @@
 }
 
 .header {
-  background: var(--hirepro-green);
+  background: var(--beable-navy);
   color: white;
   padding: 12px 20px;
   position: sticky;
@@ -18,8 +18,54 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 600px;
+  gap: 16px;
+  max-width: 960px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.header-nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-tab {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.header-tab:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.header-tab.header-tab--active {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.header-progress-track {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .logo {
@@ -82,10 +128,39 @@
   width: 100%;
 }
 
+.layout--onboarding .main {
+  max-width: 960px;
+  padding: 28px 24px 56px;
+}
+
+@media (min-width: 768px) {
+  .layout--onboarding .main {
+    padding: 32px 40px 64px;
+  }
+}
+
+.layout--auth .header {
+  position: relative;
+}
+
+.main--auth {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
 .footer {
-  background: var(--hirepro-dark);
-  color: rgba(255,255,255,0.7);
+  background: var(--beable-navy);
+  color: rgba(255, 255, 255, 0.7);
   padding: 16px 20px;
   text-align: center;
   font-size: 0.8rem;
+}
+
+.layout--onboarding .footer {
+  background: var(--beable-bg);
+  color: var(--beable-muted);
+  border-top: 1px solid var(--beable-border);
 }

@@ -1,50 +1,65 @@
 .complete {
   text-align: center;
-  padding: 24px 0;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
+  padding: 36px 28px 40px;
+  box-shadow: var(--beable-shadow);
 }
 
 .complete-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 24px;
-  background: var(--hirepro-green);
-  color: white;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  background: var(--beable-success-soft);
+  color: var(--beable-success);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .complete-title {
   font-size: 1.5rem;
-  color: var(--hirepro-dark);
+  font-weight: 700;
+  color: var(--beable-text);
   margin: 0 0 12px;
+  letter-spacing: -0.02em;
 }
 
 .complete-desc {
-  color: var(--hirepro-muted);
-  margin: 0 0 32px;
+  color: var(--beable-muted);
+  margin: 0 0 28px;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .complete-summary {
-  background: white;
-  border-radius: var(--hirepro-radius);
+  background: var(--beable-bg);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius-sm);
   padding: 20px;
   text-align: left;
-  margin-bottom: 32px;
-  box-shadow: var(--hirepro-shadow);
+  margin-bottom: 28px;
 }
 
 .complete-summary h3 {
   margin: 0 0 12px;
   font-size: 1rem;
+  font-weight: 600;
+  color: var(--beable-text);
 }
 
 .complete-summary ul {
   margin: 0;
   padding-left: 20px;
+  color: var(--beable-muted);
+  font-size: 0.9rem;
 }
 
 .complete-summary li {
@@ -54,12 +69,14 @@
 .complete-roles {
   margin-top: 20px;
   padding-top: 16px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--beable-border);
 }
 
 .complete-roles h4 {
   margin: 0 0 12px;
   font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--beable-text);
 }
 
 .complete-industry {
@@ -69,12 +86,15 @@
 .complete-industry strong {
   display: block;
   margin-bottom: 6px;
-  color: var(--hirepro-green);
+  color: var(--beable-accent);
+  font-size: 0.875rem;
 }
 
 .complete-industry ul {
   margin: 0;
   padding-left: 20px;
+  color: var(--beable-muted);
+  font-size: 0.875rem;
 }
 
 .complete-industry li {

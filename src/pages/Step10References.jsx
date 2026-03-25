@@ -66,7 +66,7 @@ export default function Step10References() {
       <p className="ref-note">
         We'll send them a simple 1–5 star rating request. No long forms.
       </p>
-      <StepNav current={10} nextPath="/dashboard" onNext={handleNext} canSkip />
+      <StepNav current={10} nextPath="/app" onNext={handleNext} canSkip />
     </div>
   )
 }

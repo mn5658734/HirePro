@@ -1,0 +1,35 @@
+/**
+ * HirePro — BeAble-inspired design tokens
+ * Navy + indigo accent, light SaaS surfaces
+ */
+:root {
+  --beable-navy: #0b111d;
+  --beable-navy-soft: #151b2a;
+  --beable-accent: #6366f1;
+  --beable-accent-hover: #4f46e5;
+  --beable-accent-soft: #eef2ff;
+  --beable-bg: #f9fafb;
+  --beable-surface: #ffffff;
+  --beable-border: #e5e7eb;
+  --beable-text: #111827;
+  --beable-muted: #6b7280;
+  --beable-success: #22c55e;
+  --beable-success-soft: #dcfce7;
+  --beable-radius: 10px;
+  --beable-radius-sm: 8px;
+  --beable-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --beable-shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.04);
+
+  /* Legacy HirePro vars → map to BeAble */
+  --hirepro-green: var(--beable-navy);
+  --hirepro-green-light: var(--beable-navy-soft);
+  --hirepro-gold: var(--beable-accent);
+  --hirepro-cream: var(--beable-bg);
+  --hirepro-dark: var(--beable-text);
+  --hirepro-text: var(--beable-text);
+  --hirepro-muted: var(--beable-muted);
+  --hirepro-white: var(--beable-surface);
+  --hirepro-shadow: var(--beable-shadow-card);
+  --hirepro-radius: var(--beable-radius);
+  --hirepro-radius-lg: 12px;
+}

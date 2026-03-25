@@ -1,6 +1,6 @@
 .video-container {
-  background: var(--hirepro-dark);
-  border-radius: var(--hirepro-radius-lg);
+  background: var(--beable-navy);
+  border-radius: var(--beable-radius);
   padding: 24px;
   text-align: center;
   margin-bottom: 24px;
@@ -33,11 +33,18 @@
 
 .video-record-btn {
   margin-top: 16px;
-  padding: 14px 28px;
-  background: var(--hirepro-gold);
-  color: var(--hirepro-dark);
+  padding: 12px 24px;
+  background: var(--beable-accent);
+  color: white;
   border: none;
-  border-radius: var(--hirepro-radius);
+  border-radius: var(--beable-radius-sm);
   font-weight: 600;
+  font-size: 0.95rem;
+  font-family: inherit;
   cursor: pointer;
+  transition: background 0.15s;
+}
+
+.video-record-btn:hover {
+  background: var(--beable-accent-hover);
 }

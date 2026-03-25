@@ -13,6 +13,14 @@ export default function Landing() {
         <p className="landing-desc">
           No resume needed. Show your skills, get matched with jobs.
         </p>
+        <nav className="landing-quick-tabs" aria-label="Find jobs and AI prep">
+          <Link to="/jobs" className="landing-quick-tab">
+            Find Jobs
+          </Link>
+          <Link to="/app/practice" className="landing-quick-tab">
+            Prep AI
+          </Link>
+        </nav>
       </div>
       <div className="landing-features">
         <div className="feature">

@@ -15,17 +15,57 @@
 .landing-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--hirepro-dark);
+  color: var(--beable-text);
   margin: 0 0 12px;
+  letter-spacing: -0.02em;
 }
 
 .landing-desc {
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   font-size: 1rem;
-  margin: 0;
   max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 20px;
+}
+
+/* FIND JOBS + PREP AI — dashboard-style segmented control */
+.landing-quick-tabs {
+  display: flex;
+  max-width: 360px;
+  margin: 0 auto 28px;
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius-sm);
+  overflow: hidden;
+  background: var(--beable-surface);
+  box-shadow: var(--beable-shadow);
+}
+
+.landing-quick-tab {
+  flex: 1;
+  text-align: center;
+  padding: 14px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--beable-text);
+  background: var(--beable-bg);
+  transition: background 0.15s, color 0.15s;
+  border: none;
+  border-right: 1px solid var(--beable-border);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-quick-tab:last-child {
+  border-right: none;
+}
+
+.landing-quick-tab:hover {
+  background: var(--beable-accent-soft);
+  color: var(--beable-accent);
 }
 
 .landing-features {
@@ -44,41 +84,19 @@
   align-items: center;
   gap: 12px;
   padding: 12px 16px;
-  background: white;
-  border-radius: var(--hirepro-radius);
-  box-shadow: var(--hirepro-shadow);
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
+  box-shadow: var(--beable-shadow);
 }
 
 .feature-icon {
-  color: var(--hirepro-green);
+  color: var(--beable-accent);
   font-weight: 700;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 28px;
-  border-radius: var(--hirepro-radius);
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: all 0.2s;
-}
-
-.btn-primary {
-  background: var(--hirepro-green);
-  color: white;
-}
-
-.btn-primary:hover {
-  background: var(--hirepro-green-light);
-  transform: translateY(-1px);
-}
-
-.btn-lg {
+.landing .btn-lg {
   min-height: 52px;
-  padding: 16px 40px;
+  padding: 14px 32px;
+  font-size: 1rem;
 }

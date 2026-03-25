@@ -1,19 +1,48 @@
+/* Onboarding step — matches dashboard cards (white surface, gray page) */
 .step {
-  max-width: 480px;
+  max-width: 720px;
   margin: 0 auto;
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
+  padding: 28px 24px 32px;
+  box-shadow: var(--beable-shadow);
+}
+
+@media (min-width: 640px) {
+  .step {
+    padding: 32px 36px 36px;
+  }
+}
+
+.step--wide {
+  max-width: 900px;
+}
+
+/* Embedded in app Practice card — no double chrome */
+.step.step-embed {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  max-width: none;
+  margin: 0;
 }
 
 .step-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: var(--hirepro-dark);
+  color: var(--beable-text);
   margin: 0 0 8px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .step-desc {
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   margin: 0 0 24px;
   font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .step-form {
@@ -22,16 +51,21 @@
 
 .input {
   width: 100%;
-  padding: 14px 16px;
-  border: 2px solid #e0e0e0;
-  border-radius: var(--hirepro-radius);
-  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius-sm);
+  font-size: 0.95rem;
   font-family: inherit;
+  background: #f9fafb;
+  color: var(--beable-text);
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .input:focus {
-  border-color: var(--hirepro-green);
+  border-color: var(--beable-accent);
   outline: none;
+  box-shadow: 0 0 0 3px var(--beable-accent-soft);
+  background: var(--beable-surface);
 }
 
 .visually-hidden {
@@ -59,17 +93,18 @@
   align-items: center;
   gap: 8px;
   padding: 16px;
-  background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: var(--hirepro-radius);
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius-sm);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 
 .skill-card:hover,
 .skill-card.selected {
-  border-color: var(--hirepro-green);
-  background: rgba(15, 76, 58, 0.05);
+  border-color: var(--beable-accent);
+  background: var(--beable-accent-soft);
+  box-shadow: var(--beable-shadow);
 }
 
 .skill-icon {
@@ -91,17 +126,17 @@
 
 .day-btn {
   padding: 12px 16px;
-  border: 2px solid #e0e0e0;
-  background: white;
-  border-radius: 8px;
+  border: 1px solid var(--beable-border);
+  background: var(--beable-surface);
+  border-radius: var(--beable-radius-sm);
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
 }
 
 .day-btn.selected {
-  border-color: var(--hirepro-green);
-  background: var(--hirepro-green);
+  border-color: var(--beable-accent);
+  background: var(--beable-accent);
   color: white;
 }
 
@@ -144,16 +179,16 @@
   justify-content: center;
   gap: 8px;
   padding: 24px;
-  border: 2px dashed #ccc;
-  border-radius: var(--hirepro-radius);
-  background: white;
+  border: 1px dashed var(--beable-border);
+  border-radius: var(--beable-radius);
+  background: var(--beable-bg);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.15s, background 0.15s;
 }
 
 .cred-upload-btn:hover {
-  border-color: var(--hirepro-green);
-  background: rgba(15, 76, 58, 0.03);
+  border-color: var(--beable-accent);
+  background: var(--beable-accent-soft);
 }
 
 .cred-icon {
@@ -171,10 +206,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  background: white;
-  border-radius: 8px;
+  background: var(--beable-bg);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius-sm);
   margin-bottom: 8px;
-  box-shadow: var(--hirepro-shadow);
 }
 
 .cred-item button {
@@ -182,7 +217,9 @@
   border: none;
   font-size: 1.25rem;
   cursor: pointer;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
+  min-width: 44px;
+  min-height: 44px;
 }
 
 /* Geo */
@@ -193,18 +230,18 @@
   gap: 12px;
   width: 100%;
   padding: 20px;
-  background: white;
-  border: 2px solid var(--hirepro-green);
-  border-radius: var(--hirepro-radius);
-  font-size: 1.1rem;
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-accent);
+  border-radius: var(--beable-radius-sm);
+  font-size: 1.05rem;
   font-weight: 600;
-  color: var(--hirepro-green);
+  color: var(--beable-accent);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.15s, color 0.15s;
 }
 
 .geo-btn:hover:not(:disabled) {
-  background: var(--hirepro-green);
+  background: var(--beable-accent);
   color: white;
 }
 
@@ -218,8 +255,9 @@
 }
 
 .geo-success {
-  color: var(--hirepro-green);
+  color: var(--beable-success);
   margin: 16px 0;
+  font-weight: 500;
 }
 
 .geo-error {
@@ -229,11 +267,11 @@
 
 /* Situation test */
 .situation-card {
-  background: white;
-  border-radius: var(--hirepro-radius);
+  background: var(--beable-bg);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: var(--hirepro-shadow);
 }
 
 .situation-scenario {
@@ -250,23 +288,24 @@
 .situation-opt {
   padding: 14px 16px;
   text-align: left;
-  border: 2px solid #e0e0e0;
-  background: white;
-  border-radius: 8px;
+  border: 1px solid var(--beable-border);
+  background: var(--beable-surface);
+  border-radius: var(--beable-radius-sm);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.15s, background 0.15s;
 }
 
 .situation-opt:hover,
 .situation-opt.selected {
-  border-color: var(--hirepro-green);
-  background: rgba(15, 76, 58, 0.05);
+  border-color: var(--beable-accent);
+  background: var(--beable-accent-soft);
 }
 
 .step-progress {
   font-size: 0.85rem;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   margin: 0 0 16px;
+  font-weight: 500;
 }
 
 /* References */
@@ -279,6 +318,6 @@
 
 .ref-note {
   font-size: 0.9rem;
-  color: var(--hirepro-muted);
+  color: var(--beable-muted);
   margin: 0 0 24px;
 }

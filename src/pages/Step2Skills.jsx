@@ -28,7 +28,7 @@ export default function Step2Skills() {
   const handleNext = () => navigate('/step/3')
 
   return (
-    <div className="step">
+    <div className="step step--wide">
       <h2 className="step-title">{t('selectSkills')}</h2>
       <p className="step-desc">{t('selectSkillsDesc')}</p>
       <p className="skills-hint">Select your industry, then tap roles you can do.</p>

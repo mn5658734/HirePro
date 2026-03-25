@@ -1,0 +1,274 @@
+/* Shared BeAble-style page chrome inside AppShell */
+.app-page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--beable-text);
+  margin: 0 0 4px;
+  letter-spacing: -0.02em;
+}
+
+.app-page-sub {
+  font-size: 0.95rem;
+  color: var(--beable-muted);
+  margin: 0 0 28px;
+}
+
+.app-card {
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
+  padding: 20px 24px;
+  box-shadow: var(--beable-shadow);
+  margin-bottom: 20px;
+}
+
+.app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.app-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--beable-text);
+}
+
+.app-link {
+  color: var(--beable-accent);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.app-link:hover {
+  text-decoration: underline;
+}
+
+.app-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 900px) {
+  .app-stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.app-stat-card {
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--beable-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.app-stat-icon.blue { background: #dbeafe; }
+.app-stat-icon.purple { background: #ede9fe; }
+.app-stat-icon.green { background: var(--beable-success-soft); }
+.app-stat-icon.orange { background: #ffedd5; }
+
+.app-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--beable-text);
+  line-height: 1.2;
+}
+
+.app-stat-label {
+  font-size: 0.8rem;
+  color: var(--beable-muted);
+}
+
+.btn-beable {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: var(--beable-radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s;
+}
+
+.btn-beable-primary {
+  background: var(--beable-accent);
+  color: white;
+}
+
+.btn-beable-primary:hover:not(:disabled) {
+  background: var(--beable-accent-hover);
+}
+
+.btn-beable-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-beable-outline {
+  background: white;
+  color: var(--beable-text);
+  border: 1px solid var(--beable-border);
+}
+
+.btn-beable-outline:hover {
+  background: var(--beable-bg);
+}
+
+.find-jobs-public-hint {
+  margin: -12px 0 20px;
+  padding: 12px 16px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--beable-radius-sm);
+  font-size: 0.875rem;
+  color: var(--beable-text);
+  line-height: 1.45;
+}
+
+.find-jobs-toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.find-jobs-search-wrap {
+  flex: 1 1 240px;
+  position: relative;
+}
+
+.find-jobs-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+.find-jobs-search {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.find-jobs-select {
+  padding: 12px 16px;
+  border-radius: var(--beable-radius-sm);
+  border: 1px solid var(--beable-border);
+  font-family: inherit;
+}
+
+.find-jobs-recommended {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  margin-bottom: 24px;
+}
+
+.find-jobs-rec-title {
+  margin-bottom: 16px;
+}
+
+.find-jobs-rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.find-jobs-rec-card {
+  background: white;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--beable-border);
+}
+
+.find-jobs-rec-company {
+  color: var(--beable-accent);
+  font-size: 0.85rem;
+}
+
+.find-jobs-rec-loc {
+  font-size: 0.7rem;
+  color: var(--beable-muted);
+}
+
+.find-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.find-job-card {
+  margin-bottom: 0;
+}
+
+.find-job-title {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.find-job-company {
+  margin: 0 0 8px;
+  color: var(--beable-accent);
+  font-weight: 500;
+}
+
+.find-job-meta {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+  color: var(--beable-muted);
+}
+
+.find-job-salary {
+  margin: 0 0 12px;
+  color: var(--beable-success);
+  font-weight: 600;
+}
+
+.app-insights-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .app-insights-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.app-profile-wrap .dashboard-profile {
+  max-width: none;
+}
+
+.app-practice-card {
+  background: var(--beable-surface);
+  border: 1px solid var(--beable-border);
+  border-radius: var(--beable-radius);
+  padding: 24px;
+  box-shadow: var(--beable-shadow);
+}
+

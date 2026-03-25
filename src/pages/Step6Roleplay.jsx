@@ -7,10 +7,11 @@ import StepNav from '../components/StepNav'
 import './Step.css'
 import './Roleplay.css'
 
-export default function Step6Roleplay() {
+export default function Step6Roleplay({ variant = 'onboarding' }) {
   const { t } = useLanguage()
   const { profile, updateProfile } = useProfile()
   const navigate = useNavigate()
+  const isPractice = variant === 'practice'
 
   const scenarios = useMemo(
     () => getScenariosForProfile(profile.selectedRoles || profile.skills, 3),
@@ -49,7 +50,12 @@ export default function Step6Roleplay() {
       updateProfile({ roleplayResponses: responses })
 
       if (isLastScenario) {
-        navigate('/step/7')
+        if (isPractice) {
+          setCurrentIndex(0)
+          setPhase(0)
+        } else {
+          navigate('/step/7')
+        }
       } else {
         setCurrentIndex((i) => i + 1)
         setMessages([{ role: 'ai', text: scenarios[currentIndex + 1].prompt }])
@@ -60,7 +66,7 @@ export default function Step6Roleplay() {
 
   const handleNext = () => {
     if (isLastScenario) {
-      navigate('/step/7')
+      if (!isPractice) navigate('/step/7')
     } else {
       setCurrentIndex((i) => i + 1)
       setPhase(0)
@@ -73,13 +79,13 @@ export default function Step6Roleplay() {
       <div className="step">
         <h2 className="step-title">{t('roleplay')}</h2>
         <p className="step-desc">No scenarios available.</p>
-        <StepNav current={6} nextPath="/step/7" canSkip skipPath="/step/7" />
+        {!isPractice && <StepNav current={6} nextPath="/step/7" canSkip skipPath="/step/7" />}
       </div>
     )
   }
 
   return (
-    <div className="step">
+    <div className={`step ${isPractice ? 'step-embed' : ''}`}>
       <h2 className="step-title">{t('roleplay')}</h2>
       <p className="step-desc">{t('roleplayDesc')}</p>
       <div className="roleplay-progress">
@@ -111,7 +117,16 @@ export default function Step6Roleplay() {
       <p className="roleplay-hint">
         Your responses help match you with the right jobs. Be professional and empathetic.
       </p>
-      <StepNav current={6} nextPath="/step/7" onNext={handleNext} canSkip skipPath="/step/7" />
+      {!isPractice && (
+        <StepNav current={6} nextPath="/step/7" onNext={handleNext} canSkip skipPath="/step/7" />
+      )}
+      {isPractice && (
+        <div className="practice-footer">
+          <button type="button" className="btn btn-outline" onClick={handleNext}>
+            Skip scenario
+          </button>
+        </div>
+      )}
     </div>
   )
 }
